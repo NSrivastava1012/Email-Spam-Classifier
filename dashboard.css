@@ -1,0 +1,261 @@
+/* Global Styles */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfaf2;
+}
+
+header {
+    background-color: black;
+    color: #fcfaf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header a {
+    color: #fcfaf2;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: 50px; /* Set width to the same value as height for a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Adjust font size as needed */
+    color: #fcfaf2; /* Text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+.nav-items {
+    display: flex; /* Align nav items in a row */
+    gap: 50px; /* Space between boxes */
+}
+
+.nav-item {
+    background-color: #fcfaf2; /* Box background color */
+    border: 1px solid cornflowerblue; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the box */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.nav-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Link color */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+.nav-item:hover {
+    background-color: cornflowerblue; /* Change background on hover */
+    box-shadow: 0 0 15px cornflowerblue; /* Glowing effect on hover */
+}
+
+.nav-item:hover a {
+    color: white; /* Change link color to white on hover */
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 45%; /* Adjust this value as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white
+}
+
+.banner p {
+    position: absolute;
+    top: 55%; /* Adjust this value as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px; /* Add margin to create space below the h1 */
+    color: white
+}
+
+.container {
+    padding: 20px 40px;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: cornflowerblue;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    width: 1000px;
+    margin-left:15%;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    background-color: rgb(21,65,148);
+}
+
+.card img {
+    width: 30%; /* Make the image responsive to the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: #333;
+}
+
+.card p {
+    color: white;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 2px solid black; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px; /* Space between image and text box */
+}
+
+.text-box a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Initial text color */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.text-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    background-color: black; /* Change background color on hover */
+    color: white; /* Change font color to white on hover */
+}
+
+.text-box:hover a {
+    color: white; /* Change link color to white on hover */
+}
+
+.text-box:hover h3 {
+    color: white; /* Change h3 and p text color to white on hover */
+}
+
+.faq-section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+.faq-section h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+}
+
+.faq-section p {
+    color: white;
+}
+
+.faq-section details {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.faq-section summary:hover {
+    color: rgb(21,65,148);;
+}
+
+.contact-details {
+    max-width: 6000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: white;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: rgb(21,65,148)
+}
+
+
+footer {
+    background-color: black;
+    color: #fcfaf2;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
