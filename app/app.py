@@ -8,9 +8,9 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Needed for session
 
 # Load model and vectorizer
-base_dir = os.path.dirname(os.path.dirname(__file__))
-model = joblib.load('C:\\Users\\naven\\OneDrive\\Desktop\\Email Spam Classifier\\models\\spam_model.pkl')
-vectorizer = joblib.load('C:\\Users\\naven\\OneDrive\\Desktop\\Email Spam Classifier\\models\\vectorizer.pkl')
+base_dir = os.path.dirname(__file__)
+model = joblib.load(os.path.join(base_dir, 'models', 'spam_model.pkl'))
+vectorizer = joblib.load(os.path.join(base_dir, 'models', 'vectorizer.pkl'))
 
 # Define suspicious keywords
 SUSPICIOUS_WORDS = {# Financial scams & prizes
@@ -116,10 +116,6 @@ def learn_more():
 def about():
     return render_template('about.html')
 
-@app.route('/')
-def home():
-    return "Hello from Flask on Render!"
-
 
 
 
@@ -143,3 +139,4 @@ from your_app_file import app  # or from app import app
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # use Render’s PORT if set
     app.run(host="0.0.0.0", port=port)
+
