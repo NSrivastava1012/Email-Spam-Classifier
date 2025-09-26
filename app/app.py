@@ -136,4 +136,10 @@ def highlight_keywords(text):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+
+    import os
+from your_app_file import app  # or from app import app
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # use Render’s PORT if set
+    app.run(host="0.0.0.0", port=port)
