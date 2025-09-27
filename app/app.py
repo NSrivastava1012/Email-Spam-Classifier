@@ -4,7 +4,10 @@ import re
 from collections import deque
 import os
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder='static',
+    template_folder='templates')
 app.secret_key = os.urandom(24)  # Needed for session
 
 # Load model and vectorizer
@@ -139,4 +142,5 @@ from your_app_file import app  # or from app import app
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # use Render’s PORT if set
     app.run(host="0.0.0.0", port=port)
+
 
